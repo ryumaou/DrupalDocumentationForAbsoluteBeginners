@@ -21,9 +21,9 @@ The . at the end ensures that the files are installed directly into the drupal f
 Composer will set up Drupal along with its dependencies. When it finishes, you’ll see the full Drupal installation in the drupal directory.
 ## Step 4: Set Up Your Web Server to Recognize the /drupal Directory
 If you want your main website at example.com to access Drupal at example.com/drupal:
-Apache: Add a .htaccess file in the drupal directory if it’s not already there (it should come with the installation). Apache will then recognize the directory correctly.
+### Apache: Add a .htaccess file in the drupal directory if it’s not already there (it should come with the installation). Apache will then recognize the directory correctly.
 
-Nginx: In your Nginx configuration, add a location block for /drupal if needed.
+### Nginx: In your Nginx configuration, add a location block for /drupal if needed.
 
 ## Step 5: Set Up the Database
 Log in to your database management tool (e.g., phpMyAdmin) or use the command line to create a new database for your Drupal installation.
