@@ -66,3 +66,9 @@ location /drupal {
 Visit http://yourdomain.com/drupal to see your Drupal site up and running.
 Log in using the admin credentials you set up and start configuring your Drupal site.
 And that's it! You should now have Drupal running in a subdirectory called /drupal within your existing website. 
+
+## Step 9: Redirect access from document root
+For Apache, in the Drupal .htaccess file, add the following to redirect queries from http://yourdomain.com/drupal to http://yourdomain.com/drupal/web, where the actual documents live:
+```
+RewriteRule ^$ /drupal/web/ [L,R=301]
+```
