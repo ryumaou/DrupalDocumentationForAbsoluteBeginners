@@ -1,4 +1,5 @@
 Installing Drupal into an existing website and running it from its own subdirectory (/drupal) can be done smoothly using Composer. Since you have shell access and Composer installed, follow these steps:
+### Note: For some webhosts that have PHP restrictions, you may need to change the PHP version to "8.3 'native' " to get the installer to work via composer.
 
 ## Step 1: Navigate to Your Website’s Root Directory
 Open a terminal or SSH into your server.
