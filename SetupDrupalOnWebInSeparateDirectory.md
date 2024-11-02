@@ -68,7 +68,19 @@ Log in using the admin credentials you set up and start configuring your Drupal 
 And that's it! You should now have Drupal running in a subdirectory called /drupal within your existing website. 
 
 ## Step 9: Redirect access from document root
-For Apache, in the Drupal .htaccess file, add the following to redirect queries from http://yourdomain.com/drupal to http://yourdomain.com/drupal/web, where the actual documents live:
+#### For Apache
+In the Drupal .htaccess file, add the following to redirect queries from http://yourdomain.com/drupal to http://yourdomain.com/drupal/web, where the actual documents live:
 ```
 RewriteRule ^$ /drupal/web/ [L,R=301]
+```
+#### For Nginx
+Open the Nginx Configuration file for your site (usually located in /etc/nginx/sites-available/your-site).
+
+Modify the root directive to point to the web directory:
+```
+root /path/to/your/website/root/drupal/web;
+```
+Restart Nginx to apply the changes:
+```
+sudo systemctl restart nginx
 ```
