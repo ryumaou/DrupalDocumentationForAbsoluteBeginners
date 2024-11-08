@@ -20,6 +20,10 @@ composer create-project drupal/recommended-project .
 ```
 The . at the end ensures that the files are installed directly into the drupal folder rather than creating an extra subdirectory.
 Composer will set up Drupal along with its dependencies. When it finishes, you’ll see the full Drupal installation in the drupal directory.
+Note that at the time this document was created, Drupal v11 was available but not quite ready for "prime time".  To force composer to install the latest subrev of Drupal v10, use the following command:
+```
+composer create-project drupal/recommended-project:^10 drupal .
+```
 ## Step 4: Set Up Your Web Server to Recognize the /drupal Directory
 If you want your main website at example.com to access Drupal at example.com/drupal:
 #### Apache: 
