@@ -50,3 +50,8 @@ Tags and Categories should appear as Taxonomy terms.
 ## Step 6: Map Custom Fields (Optional)
 If you have custom fields in WordPress, you may need to extend the migration configuration files located in modules/contrib/wordpress_migrate/config/install/. This can require custom development if you have complex data structures.
 
+#### Note:
+After the import is completed, you may want to refresh the cache to make sure that all your newly import content is showing correctly.  To do that, run this command in a terminal session:
+```
+drush cr
+```
