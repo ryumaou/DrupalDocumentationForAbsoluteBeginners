@@ -7,12 +7,12 @@ Create or open the .htaccess file in the root directory of your website.
 Add the following rewrite rules:
 ```
 RewriteEngine on
-RewriteCond %{REQUEST_URI} !^/drupal/
+RewriteCond %{REQUEST_URI} !^/drupal/web/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /drupal/$1 [L]
+RewriteRule ^(.*)$ /drupal/web/$1 [L]
 RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^(.*)$ /drupal/index.php [L]
+RewriteRule ^(.*)$ /drupal/web/index.php [L]
 ```
 #### Edit the .htaccess file in the /drupal directory:
 
