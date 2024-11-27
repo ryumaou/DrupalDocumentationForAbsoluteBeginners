@@ -20,9 +20,22 @@ Locate the RewriteBase directive and update it to:
 ```
 RewriteBase /drupal
 ```
+#### Edit the settings.php file in the /drupal/web/sites/default:
+Locate that file and add the following to it:
+$base_url = 'https://ryumaou.com/drupal';
+
+if (isset($GLOBALS['request']) and
+'/drupal/web/index.php' === $GLOBALS['request']->server->get('SCRIPT_NAME')) {
+$GLOBALS['request']->server->set('SCRIPT_NAME', '/index.php');
+}
+```
 #### Clear Drupal’s Cache:
 
 Log in to your Drupal admin panel, navigate to Configuration > Development > Performance, and click Clear All Caches.
+Also, I reccomend that you flush them via drush with the command:
+```
+drush cr
+```
 
 ## For Nginx
 #### Open your Nginx configuration file (usually located in /etc/nginx/sites-available/your-site).
