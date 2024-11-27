@@ -22,6 +22,7 @@ RewriteBase /drupal
 ```
 #### Edit the settings.php file in the /drupal/web/sites/default:
 Locate that file and add the following to it:
+```
 $base_url = 'https://ryumaou.com/drupal';
 
 if (isset($GLOBALS['request']) and
