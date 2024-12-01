@@ -89,6 +89,7 @@ Restart Nginx to apply the changes:
 sudo systemctl restart nginx
 ```
 ## Step 10: Install Drush via Composer
+While considered optional, it is highly recommended that you install and use Drush to manage your Drupal installation.
 Open a terminal in your Drupal project root (where your composer.json file is located).
 Run this command to install Drush:
 ```
