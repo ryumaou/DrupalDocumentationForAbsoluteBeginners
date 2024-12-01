@@ -88,3 +88,50 @@ Restart Nginx to apply the changes:
 ```
 sudo systemctl restart nginx
 ```
+## Step 10: Install Drush via Composer
+Open a terminal in your Drupal project root (where your composer.json file is located).
+Run this command to install Drush:
+```
+composer require drush/drush
+```
+Once installed, Drush can be run from the vendor/bin directory:
+```
+vendor/bin/drush status
+```
+## Step 11: Confirm Drush Installation
+To confirm Drush is accessible, you can run:
+```
+vendor/bin/drush --version
+```
+## Step 12: Add Drush to PATH
+To permanently add the location of Drush to the path.
+#### A. Find the Correct File
+The file to edit depends on your shell:
+
+Bash: ~/.bashrc or ~/.bash_profile
+Zsh: ~/.zshrc
+Other shells: Check your shell's documentation.
+#### B. Edit the File
+Open the file in a text editor, e.g.:
+```
+nano ~/.bashrc
+```
+Add the following line at the end:
+```
+export PATH="/new/directory:$PATH"
+```
+Save and exit the editor (e.g., in Nano: Ctrl+O, Enter, then Ctrl+X).
+
+#### C. Apply the Changes
+Reload the configuration file:
+```
+source ~/.bashrc
+```
+or, if you're editing ~/.bash_profile:
+```
+source ~/.bash_profile
+```
+Verify the change:
+```
+echo $PATH
+```
