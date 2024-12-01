@@ -118,7 +118,7 @@ nano ~/.bashrc
 ```
 Add the following line at the end:
 ```
-export PATH="/new/directory:$PATH"
+export PATH="/home/accountname/public_html/drupal/vendor/bin:$PATH"
 ```
 Save and exit the editor (e.g., in Nano: Ctrl+O, Enter, then Ctrl+X).
 
