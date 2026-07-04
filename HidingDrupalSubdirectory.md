@@ -15,6 +15,7 @@ RewriteCond %{REQUEST_URI} ^/$
 RewriteRule ^(.*)$ /drupal/web/index.php [L]
 ```
 #### Edit the .htaccess file in the /drupal directory:
+NOTE: These may vary depending on settings, but they should be in sync.  Also, upgrading versions may overwrite this file and require updating!  In particular, upgrading from v10.x to v11.x had this happen and caused seemingly unrelated errors about "Redirects to external URLs are not allowed by default, use \Drupal\Core\Routing\TrustedRedirectResponse for it."
 
 Locate the RewriteBase directive and update it to:
 ```
